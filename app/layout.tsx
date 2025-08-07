@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
+import { Geist, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import localFont from "next/font/local";
+
+const geist = Geist({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist",
+});
+
+const jakarta_sans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Flex UI | Modern UI Components for Developers & Designers",
@@ -48,68 +60,23 @@ export const metadata: Metadata = {
   },
 };
 
-// Excon font family
-const exconRegular = localFont({
-  src: "../public/fonts/excon-regular.otf",
-  display: "swap",
-  variable: "--font-excon",
-  weight: "400",
-});
-
-const exconMedium = localFont({
-  src: "../public/fonts/excon-medium.otf",
-  display: "swap",
-  variable: "--font-excon-medium",
-  weight: "500",
-});
-
-const exconBold = localFont({
-  src: "../public/fonts/excon-bold.otf",
-  display: "swap",
-  variable: "--font-excon-bold",
-  weight: "700",
-});
-
-// General Sans font family
-const generalSansRegular = localFont({
-  src: "../public/fonts/generalsans-regular.otf",
-  display: "swap",
-  variable: "--font-general-sans",
-  weight: "400",
-});
-
-const generalSansMedium = localFont({
-  src: "../public/fonts/generalsans-medium.otf",
-  display: "swap",
-  variable: "--font-general-sans-medium",
-  weight: "500",
-});
-
-const generalSansBold = localFont({
-  src: "../public/fonts/generalsans-bold.otf",
-  display: "swap",
-  variable: "--font-general-sans-bold",
-  weight: "700",
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`
-        ${exconRegular.variable}
-      ${exconMedium.variable}
-      ${exconBold.variable}
-        ${generalSansRegular.className}
-      ${generalSansMedium.variable}
-      ${generalSansBold.variable}
-    `}
-    >
-      <body className="antialiased">{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        {/* <div className="h-screen w-screen fixed -z-50 pointer-events-none">
+          <Overlay />
+        </div> */}
+        <div
+          className={`${geist.variable} ${jakarta_sans.variable} relative z-10 min-h-screen`}
+        >
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

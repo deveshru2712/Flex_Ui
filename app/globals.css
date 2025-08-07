@@ -25,28 +25,4 @@ body {
 }
 
 @layer utilities {
-  /* excon font family */
-  .font-excon-regular {
-    font-family: var(--font-excon);
-  }
-
-  .font-excon-medium {
-    font-family: var(--font-excon-medium);
-  }
-
-  .font-excon-bold {
-    font-family: var(--font-excon-bold);
-  }
-  /* general sans family */
-  .general-sans {
-    font-family: var(--font-general-sans);
-  }
-
-  .general-sans-medium {
-    font-family: var(--font-general-sans-medium);
-  }
-
-  .general-sans-bold {
-    font-family: var(--font-general-sans-boldc);
-  }
 }
