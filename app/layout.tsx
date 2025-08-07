@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Plus_Jakarta_Sans } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-const geist = Geist({
+export const geist = Geist({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-geist",
@@ -66,16 +67,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        {/* <div className="h-screen w-screen fixed -z-50 pointer-events-none">
-          <Overlay />
-        </div> */}
-        <div
-          className={`${geist.variable} ${jakarta_sans.variable} relative z-10 min-h-screen`}
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geist.variable} ${jakarta_sans.className}`}
+    >
+      <body className="antialiased min-h-screen font-sans">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
           {children}
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );
