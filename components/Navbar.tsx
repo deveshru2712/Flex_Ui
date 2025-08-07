@@ -21,7 +21,7 @@ const Navbar = () => {
           </Link>
 
           <div>
-            <ul className="flex items-center justify-between text-xl font-medium gap-10 font-geist">
+            <ul className="hidden  items-center justify-between text-xl font-medium gap-10 font-geist">
               <li>
                 <Link href={"/components"}>Components</Link>
               </li>
