@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Toggle from "./Toggle";
 import Link from "next/link";
@@ -25,7 +26,7 @@ const Navbar = () => {
             <ul className="flex items-center dark:text-slate-200 justify-between text-lg font-medium gap-8 font-geist">
               <li>
                 <Link
-                  href="/components"
+                  href="/components/Card_reveal"
                   className="hover:opacity-80 transition-opacity"
                 >
                   Components
@@ -33,7 +34,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="https://github.com/yourusername/flex-ui"
+                  href="https://github.com/deveshru2712/Flex_Ui"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:opacity-80 transition-opacity"

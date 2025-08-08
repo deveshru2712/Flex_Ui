@@ -1,3 +1,4 @@
+"use client";
 import { Github } from "lucide-react";
 import Link from "next/link";
 
@@ -10,20 +11,34 @@ export function Footer() {
             © {new Date().getFullYear()} Flex UI. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
+            <div className="relative group">
+              <Link
+                href="#"
+                className="text-sm font-medium text-gray-400 dark:text-gray-500 cursor-not-allowed"
+                aria-disabled="true"
+                onClick={(e) => e.preventDefault()}
+              >
+                Documentation
+              </Link>
+              <div className="absolute bottom-full mb-2 hidden group-hover:block px-2 py-1 text-xs text-white bg-gray-800 dark:bg-gray-700 rounded whitespace-nowrap">
+                Coming Soon
+              </div>
+            </div>
+            <div className="relative group">
+              <Link
+                href="#"
+                className="text-sm font-medium text-gray-400 dark:text-gray-500 cursor-not-allowed"
+                aria-disabled="true"
+                onClick={(e) => e.preventDefault()}
+              >
+                Examples
+              </Link>
+              <div className="absolute bottom-full mb-2 hidden group-hover:block px-2 py-1 text-xs text-white bg-gray-800 dark:bg-gray-700 rounded whitespace-nowrap">
+                Coming Soon
+              </div>
+            </div>
             <Link
-              href="/docs"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Documentation
-            </Link>
-            <Link
-              href="/examples"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Examples
-            </Link>
-            <Link
-              href="https://github.com/yourusername/flex-ui"
+              href="https://github.com/deveshru2712/Flex_Ui"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-sm font-medium hover:underline underline-offset-4"

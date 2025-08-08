@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: "https://flexui.com",
     images: [
       {
-        url: "https://flexui.com/og-flex-ui.jpg",
+        url: "/image.png",
         width: 1200,
         height: 630,
         alt: "Flex UI: Your Go-To Component Library",
@@ -49,8 +49,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Flex UI: The Ultimate Component Library for Devs",
     description:
-      "Stop reinventing the wheel—use Flex UI’s production-ready components for React, Next.js, and more.",
-    images: ["https://flexui.com/twitter-flex-ui.jpg"],
+      "Stop reinventing the wheel—use Flex UI's production-ready components for React, Next.js, and more.",
+    images: {
+      url: "/image.png",
+      width: 1200,
+      height: 630,
+      alt: "Flex UI Twitter Card",
+    },
   },
   alternates: {
     canonical: "https://flexui.com",
