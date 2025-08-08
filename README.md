@@ -34,7 +34,7 @@ Flex UI is a minimalist component library built for modern web applications. It 
 2.  Install dependencies:
 
     ```bash
-    npm install  # or yarn install
+    bun install  
     ```
 
 ## Usage Guide
@@ -42,7 +42,7 @@ Flex UI is a minimalist component library built for modern web applications. It 
 1.  Start the development server:
 
     ```bash
-    npm run dev  # or yarn dev
+    bun run dev 
     ```
 
     This will start the Next.js development server, typically running on `http://localhost:3000`.
