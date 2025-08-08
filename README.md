@@ -7,9 +7,6 @@ Flex UI is a minimalist component library built for modern web applications. It 
 *   **Ready-to-use UI Components:** A collection of pre-built, customizable components for React applications.
 *   **Dark/Light Theme Support:** Utilizes `next-themes` to provide seamless dark and light theme switching.
 *   **Responsive Design:** Components are designed to be responsive and adapt to different screen sizes.
-*   **Accessible Components:** Focus on accessibility to ensure usability for all users.
-*   **Card Reveal Component:** A card component with a reveal effect, displaying a question and its solution (implemented in `app/components/(view)/Card_reveal/Card.tsx`).
-*   **Navbar and Footer:** Standard navigation and footer components for a consistent user experience.
 
 ## Technology Stack
 
@@ -19,14 +16,11 @@ Flex UI is a minimalist component library built for modern web applications. It 
 *   **`motion/react`:** Library for creating animations, specifically used in the `Card` component.
 *   **`lucide-react`:** Library of icons.
 *   **`next-themes`:** Library for adding dark mode support.
-*   **`class-variance-authority` (cva):** Utility for creating type-safe component variants.
-*   **`clsx`:** Utility for conditionally joining class names.
-*   **`tailwind-merge`:** Utility to merge Tailwind CSS classes.
 
 ## Prerequisites
 
 *   Node.js (version 18 or higher recommended)
-*   npm or yarn package manager
+*   bun package manager
 
 ## Installation Instructions
 
@@ -56,38 +50,6 @@ Flex UI is a minimalist component library built for modern web applications. It 
 2.  Explore the components:
 
     Navigate to `/components` to see a demonstration of the available components.
-
-3.  Using the `Card` component:
-
-    *   Import the `Card` component and the `data` array from `app/components/(view)/Card_reveal/index.ts`.
-
-        ```javascript
-        import Card from "@/app/components/(view)/Card_reveal/Card";
-        import { data } from "@/app/components/(view)/Card_reveal/index";
-        ```
-
-    *   Map over the `data` array to render the `Card` components. The `data` array contains objects with `id`, `question`, `description`, and `answer` properties.
-
-        ```jsx
-        {data.map((element) => (
-          <Card key={element.id} {...element} />
-        ))}
-        ```
-
-## API Documentation
-
-This project focuses on UI components, and as such, does not expose a traditional API. However, the properties for the `Card` component are defined as follows:
-
-```typescript
-interface CardProps {
-  id: number;
-  question: string;
-  description: string;
-  answer: string;
-}
-```
-
-These properties are required when using the `Card` component.
 
 ## Contributing Guidelines
 
