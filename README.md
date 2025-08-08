@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flex UI
 
-## Getting Started
+Flex UI is a minimalist component library built for modern web applications. It provides clean, accessible, and open-source React components designed to speed up your development workflow and create stunning user interfaces.
 
-First, run the development server:
+## Features and Functionality
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   **Ready-to-use UI Components:** A collection of pre-built, customizable components for React applications.
+*   **Dark/Light Theme Support:** Utilizes `next-themes` to provide seamless dark and light theme switching.
+*   **Responsive Design:** Components are designed to be responsive and adapt to different screen sizes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   **Next.js:** React framework for building server-rendered and static web applications.
+*   **React:** JavaScript library for building user interfaces.
+*   **Tailwind CSS:** Utility-first CSS framework for styling components.
+*   **`motion/react`:** Library for creating animations, specifically used in the `Card` component.
+*   **`lucide-react`:** Library of icons.
+*   **`next-themes`:** Library for adding dark mode support.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Prerequisites
 
-## Learn More
+*   Node.js (version 18 or higher recommended)
+*   bun package manager
 
-To learn more about Next.js, take a look at the following resources:
+## Installation Instructions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    git clone https://github.com/deveshru2712/Flex_Ui.git
+    cd Flex_Ui
+    ```
 
-## Deploy on Vercel
+2.  Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    bun install  
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Usage Guide
+
+1.  Start the development server:
+
+    ```bash
+    bun run dev 
+    ```
+
+    This will start the Next.js development server, typically running on `http://localhost:3000`.
+
+2.  Explore the components:
+
+    Navigate to `/components` to see a demonstration of the available components.
+
+## Contributing Guidelines
+
+Contributions are welcome! To contribute to Flex UI, please follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with descriptive commit messages.
+4.  Test your changes thoroughly.
+5.  Submit a pull request to the `master` branch.
+
+Please ensure your code adheres to the project's coding standards and includes appropriate tests.
+
+## License Information
+
+The license for this project is not specified. Please contact the repository owner for more information.
+
+## Contact/Support Information
+
+For questions or support, please contact the repository owner: deveshru2712
+
+You can also reach out through the GitHub repository's issue tracker.
