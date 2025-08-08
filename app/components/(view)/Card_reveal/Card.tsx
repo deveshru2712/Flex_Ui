@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 
 interface CardProps {
@@ -10,30 +10,66 @@ interface CardProps {
 }
 
 const Card = ({ id, question, description, answer }: CardProps) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      // checking if it is a mobile device
+      const newIsMobile = window.innerWidth < 768 || "ontouchstart" in window;
+      setIsMobile(newIsMobile);
+      // Reset flip state when switching between mobile/desktop
+      if (newIsMobile !== isMobile) {
+        setIsFlipped(false);
+      }
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, [isMobile]);
+
+  const handleClick = () => {
+    if (isMobile) {
+      setIsFlipped((prev) => !prev);
+    }
+  };
+
   return (
-    <div className="min-h-[300px] w-full cursor-pointer perspective-distant">
+    <div
+      className="h-full min-h-[300px] w-full cursor-pointer relative perspective-distant"
+      onClick={handleClick}
+    >
       <motion.div
-        whileHover={{ rotateY: 180 }}
+        animate={isMobile ? { rotateY: isFlipped ? 180 : 0 } : { rotateY: 0 }}
+        whileHover={!isMobile ? { rotateY: 180 } : {}}
         transition={{ duration: 0.5 }}
-        className="w-full h-full font-geist border rounded-3xl dark:bg-slate-100/10 transform-3d relative"
+        className="border h-full w-full flex flex-col transform-3d absolute px-4 sm:px-6 py-4 backface-hidden rounded-2xl sm:rounded-3xl dark:bg-slate-300/10"
       >
-        {/* front face */}
-        <div className="px-6 py-4 backface-hidden flex absolute inset-0 flex-col space-y-10">
-          <div className="text-base md:text-xl font-semibold flex items-start gap-0.5">
-            {id}.<h2>{question}</h2>
-          </div>
-          <div className="w-full rounded-3xl bg-black/10 dark:bg-slate-200/50 text-center px-4 py-2 font-medium">
-            Problem
-          </div>
-          <div className="text-sm md:text-base font-medium">{description}</div>
+        <div className="flex items-start md:text-lg text-2xl sm:text-xl gap-0.5 font-semibold font-geist mb-3 sm:mb-4 h-14 sm:h-16">
+          <span className="flex-shrink-0">{id}.</span>
+          <h1 className="leading-tight">{question}</h1>
+        </div>
+
+        <div className="w-full px-3 sm:px-4 py-1.5 bg-black/10 dark:bg-white/10 rounded-2xl sm:rounded-3xl mb-3 sm:mb-4 font-medium text-base">
+          Problem
+        </div>
+
+        <div className="flex-grow mb-3 sm:mb-4">
+          <p className="text-gray-700 dark:text-neutral-300 leading-relaxed text-sm sm:text-base">
+            {description}
+          </p>
         </div>
 
         {/* back face */}
-        <div className="backface-hidden dark:bg-slate-100/10 absolute border rounded-3xl py-4 px-6 inset-0 flex flex-col space-y-10 rotate-y-180">
-          <div className="w-full rounded-3xl bg-black/10 dark:bg-slate-200/50 text-center px-4 py-2 font-medium">
-            Solution
+        <div className="border rounded-3xl absolute backface-hidden w-full h-full inset-0 rotate-y-180">
+          <div className="flex flex-col px-6 py-4 space-y-5">
+            <div className="dark:text-white font-medium bg-black/10 dark:bg-white/30 rounded-full px-4 py-1.5">
+              Solution
+            </div>
+            <p className="text-xs sm:text-sm">{answer}</p>
           </div>
-          <div className="font-medium text-base">{answer}</div>
         </div>
       </motion.div>
     </div>
