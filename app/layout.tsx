@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     title: "Flex UI | Build Faster with Ready-to-Use Components",
     description:
       "Drag, drop, and deploy. Flex UI offers pre-built, customizable components for React and CSS to accelerate your projects.",
-    url: "https://flexui.com",
+    url: "",
     images: [
       {
-        url: "/image.png",
+        url: "/flex.png",
         width: 1200,
         height: 630,
         alt: "Flex UI: Your Go-To Component Library",
@@ -51,14 +51,14 @@ export const metadata: Metadata = {
     description:
       "Stop reinventing the wheel—use Flex UI's production-ready components for React, Next.js, and more.",
     images: {
-      url: "/image.png",
+      url: "/flex.png",
       width: 1200,
       height: 630,
       alt: "Flex UI Twitter Card",
     },
   },
   alternates: {
-    canonical: "https://flexui.com",
+    canonical: "https://flex-ui-rust.vercel.app",
   },
   robots: {
     index: true,
