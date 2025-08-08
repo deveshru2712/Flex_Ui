@@ -16,45 +16,45 @@ const jakarta_sans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Flex UI | Modern UI Components for Developers & Designers",
+  title: "FlexUI | Showcase Your Frontend Masterpieces",
   description:
-    "Flex UI is a sleek, customizable component library to speed up your design and development workflow. Access responsive, accessible React & CSS components for stunning interfaces—flex your creativity!",
+    "FlexUI is where frontend developers flex their skills. Showcase your UI components, websites, and interactive projects. Get inspired by others and build your developer portfolio.",
   keywords: [
-    "Flex UI components",
-    "UI component library",
-    "React components",
-    "CSS framework",
-    "design system",
-    "frontend toolkit",
-    "responsive UI kits",
-    "developer tools",
-    "design-to-code",
-    "open-source UI library",
+    "frontend showcase",
+    "UI component gallery",
+    "developer portfolio",
+    "web development showcase",
+    "React projects",
+    "frontend community",
+    "design system examples",
+    "CSS art gallery",
+    "developer network",
+    "UI inspiration",
   ],
   openGraph: {
-    title: "Flex UI | Build Faster with Ready-to-Use Components",
+    title: "FlexUI | The Frontend Developer Showcase Platform",
     description:
-      "Drag, drop, and deploy. Flex UI offers pre-built, customizable components for React and CSS to accelerate your projects.",
+      "Display your UI creations, discover innovative components, and connect with top frontend talent. Flex your skills with FlexUI.",
     url: "",
     images: [
       {
-        url: "/flex.png",
+        url: "/image.png",
         width: 1200,
         height: 630,
-        alt: "Flex UI: Your Go-To Component Library",
+        alt: "FlexUI: Frontend Developer Showcase",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flex UI: The Ultimate Component Library for Devs",
+    title: "FlexUI: Where Developers Flex Their Frontend Skills",
     description:
-      "Stop reinventing the wheel—use Flex UI's production-ready components for React, Next.js, and more.",
+      "Join the ultimate showcase for UI components, interactive designs, and frontend projects. Elevate your portfolio.",
     images: {
-      url: "/flex.png",
+      url: "/image.png",
       width: 1200,
       height: 630,
-      alt: "Flex UI Twitter Card",
+      alt: "FlexUI Twitter Card",
     },
   },
   alternates: {
