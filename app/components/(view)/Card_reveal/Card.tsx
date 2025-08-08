@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card = ({ id, question, description, answer }: CardProps) => {
   return (
-    <div className="h-[300px] w-full cursor-pointer perspective-distant">
+    <div className="min-h-[300px] w-full cursor-pointer perspective-distant">
       <motion.div
         whileHover={{ rotateY: 180 }}
         transition={{ duration: 0.5 }}
