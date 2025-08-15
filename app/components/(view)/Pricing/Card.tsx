@@ -23,7 +23,7 @@ const Card = ({ Tier, Pricing, BestSuitedFor, CTA, Features }: CardProps) => {
           <div
             className={`h-2/3 w-full ${
               Tier === PricingTier.Professional
-                ? "bg-gradient-to-r from-[#f0e6fa] via-[#c7d5eb] to-[#aec8f3]"
+                ? "bg-gradient-to-r from-[#f7ebfd] via-[#cecbff] to-[#bdd3f8]"
                 : "bg-gray-200"
             } rounded-3xl`}
           >
