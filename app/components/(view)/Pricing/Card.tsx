@@ -23,7 +23,7 @@ const Card = ({ Tier, Pricing, BestSuitedFor, CTA, Features }: CardProps) => {
           <div
             className={`h-2/3 w-full ${
               Tier === PricingTier.Professional
-                ? "bg-gradient-to-r from-[#f7ebfd] via-[#cecbff] to-[#bdd3f8]"
+                ? "bg-gradient-to-r from-[#efddf8] via-[#c1befc] to-[#b0cbf8]"
                 : "bg-gray-200"
             } rounded-3xl`}
           >
@@ -40,7 +40,7 @@ const Card = ({ Tier, Pricing, BestSuitedFor, CTA, Features }: CardProps) => {
             </div>
           </div>
           <div className="font-semibold pl-4">{BestSuitedFor}</div>
-          <button className="bg-gradient-to-b from-black/60 via-black/80 to-black/90 text-white font-medium cursor-pointer px-6 py-2.5 rounded-3xl hover:opacity-90 transition-opacity">
+          <button className="bg-gradient-to-b shadow-[1px_4px_10px_4px_#00000024] from-black/60 via-black/80 to-black/90 text-white font-medium cursor-pointer px-6 py-2.5 rounded-3xl hover:opacity-90 transition-opacity">
             {Pricing !== "Custom" ? "Start Hiring" : "Contact Us"}
           </button>
         </div>
